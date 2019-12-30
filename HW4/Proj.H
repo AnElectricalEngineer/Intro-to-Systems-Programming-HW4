@@ -9,9 +9,6 @@
 #define MAX_SCREENINGS_PER_DAY 8 // maximum number of screenings allowed in one day.
 
 // types' definitions 
-typedef enum _BOOL {FALSE=0 , TRUE} BOOL;
+typedef enum _BOOL { FALSE = 0, TRUE } BOOL;
 
 #endif //_PROJ_H_
-
-
-
