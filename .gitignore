@@ -42,3 +42,5 @@ HW4/Debug/HW4.tlog/unsuccessfulbuild
 *.lastbuildstate
 *.tlog
 *.idb
+*.ipch
+*.ilk
