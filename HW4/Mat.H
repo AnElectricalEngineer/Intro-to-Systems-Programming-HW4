@@ -6,7 +6,7 @@ public:
 	Mat(int rows, int columns); //constructor
 	~Mat(); //destructor
 	 
-	 //Methods
+	//Methods
 	int getRowsNum() const;
 	int getColumnsNum() const;
 	int getElement(int row, int column) const;
