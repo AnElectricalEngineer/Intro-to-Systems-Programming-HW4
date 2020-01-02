@@ -1,11 +1,17 @@
-#ifndef _THEATER_H_
-#define _THEATER_H_
+#ifndef THEATER_H
+#define THEATER_H
+#include "Mat.H"
 
-#include "Mat.h"
+class Theater:public Mat {
+public:
+    Theater(int rows, int columns, int num);
+    //~Theater();
 
-class Theater :
-	public Mat
-{
+    // Methods
+    int getTheaterNum() const;
+    void Reset();
+
+private:
+    int theater_num_;
 };
-
 #endif
