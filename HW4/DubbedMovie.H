@@ -3,16 +3,18 @@
 
 #include "Movie.H"
 
-class  {
+class DubbedMovie:public Movie {
 public:
-	DubbedMovie(); //constructor
+	DubbedMovie(char* name, int length /*in minutes!*/, char* lang, int theater_num, int hebrewTheaterNum); //constructor
 	~DubbedMovie(); //destructor
 
 	//Methods
-	
+	BOOL addHebrewScreening(int day, int hebrew_screening_hour);
+	int getHebrewTheaterNum() const;
+	int getNextHebrewScreening(int day, int hour) const;
 
 private:
-	
+	Movie* dubbedMovie;
 };
 
 #endif

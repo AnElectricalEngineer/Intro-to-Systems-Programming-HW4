@@ -1,5 +1,6 @@
 #include "Theater.H"
 
+//Constructor
 Theater::Theater(int rows, int columns, int num):Mat(rows, columns), theater_num_(num){}
 
 //Check that destructor works!
