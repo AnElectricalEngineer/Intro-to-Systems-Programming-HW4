@@ -2,7 +2,7 @@
 #define CASHIER_H_
 
 #include "Proj.H"
-#include "Employee.h"
+#include "Employee.H"
 #include "Movie.H"
 #include "DubbedMovie.H"
 #include "Theater.H"
