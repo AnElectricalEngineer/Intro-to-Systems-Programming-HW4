@@ -37,15 +37,3 @@
 *.filters
 *.user
 HW4/.vs/HW4/v16/.suo
-*.pdb
-HW4/Debug/HW4.tlog/unsuccessfulbuild
-*.lastbuildstate
-*.tlog
-*.idb
-*.ipch
-*.ilk
-Questions + todo.txt
-input3.txt
-output3.txt
-*.log
-HW4/Debug/HW4.vcxproj.FileListAbsolute.txt
