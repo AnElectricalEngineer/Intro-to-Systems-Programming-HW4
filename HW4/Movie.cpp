@@ -3,7 +3,11 @@
 int Movie::price = 35;
 
 Movie::Movie(char* name, int length, char* lang, int theater_num) :
-	Mat(DAYS_IN_WEEK, MAX_SCREENINGS_PER_DAY), name_(name), length_(length), lang_(lang), theater_num_(theater_num), num_screenings_{0}{}
+	Mat(DAYS_IN_WEEK, MAX_SCREENINGS_PER_DAY), name_(name), length_(length), lang_(lang), theater_num_(theater_num)
+{
+	for (int i = 0; i < DAYS_IN_WEEK; i++)
+		num_screenings_[i] = 0;
+}
 
 //************************************************************************************* 
 // Function name : getName
