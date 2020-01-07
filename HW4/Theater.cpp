@@ -3,17 +3,29 @@
 //Constructor
 Theater::Theater(int rows, int columns, int num):Mat(rows, columns), theater_num_(num){}
 
-//Check that destructor works!
-//Theater::~Theater()
-//{
-//	
-//}
-
+//************************************************************************************* 
+// Function name : getTheaterNum
+//
+// Description : gets the number of a theater
+//
+// Parameters:  none
+//
+// Return value : the number of the theater
+//*************************************************************************************
 int Theater::getTheaterNum() const
 {
 	return theater_num_;
 }
 
+//************************************************************************************* 
+// Function name : Reset
+//
+// Description : sets all elements to 0
+//
+// Parameters:  none
+//
+// Return value : none
+//*************************************************************************************
 void Theater::Reset()
 {
 	for(int i = 0; i < getRowsNum(); ++i)

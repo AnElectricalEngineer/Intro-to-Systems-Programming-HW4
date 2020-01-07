@@ -1,22 +1,49 @@
 #include "Employee.h"
-//#include <stdio.h>
 #include <stdlib.h>
-//#include <string.h>
 
+//Constructor
 Employee::Employee(char* name, int payPerHour, char** workHours) :
 					name_(name), payPerHour_(payPerHour), workHours_(workHours) {}
 
+//************************************************************************************* 
+// Function name : getName
+//
+// Description : gets the name of the employee
+//
+// Parameters:  none
+//
+// Return value : the name of the employee
+//*************************************************************************************
 char* Employee::getName() const
 {
 	return name_;
 }
 
+//************************************************************************************* 
+// Function name : getSalary
+//
+// Description : gets the salary of the employee
+//
+// Parameters:  none
+//
+// Return value : the salary of the employee
+//*************************************************************************************
 int Employee::getSalary() const
 {
 	return payPerHour_;
 }
 
-int Employee::calcWeeklySalary()
+
+//************************************************************************************* 
+// Function name : calcWeeklySalary
+//
+// Description : calculates the weekly salary of an employee
+//
+// Parameters:  none
+//
+// Return value : the weekly salary of the employee
+//*************************************************************************************
+int Employee::calcWeeklySalary() const
 {
 	int sumHour = 0;
 

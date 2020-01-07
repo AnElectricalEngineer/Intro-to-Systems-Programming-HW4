@@ -1,12 +1,35 @@
 #include "Cashier.h"
 
+//constructor
 Cashier::Cashier(char* name, int payPerHour, char** workHours) :Employee(name, payPerHour, workHours), ticket_profit_(0) {};
 
+//************************************************************************************* 
+// Function name : getTicketProfit
+//
+// Description : calculates the total ticket profit
+//
+// Parameters:  none
+//
+// Return value : the total ticket profit
+//*************************************************************************************
 int Cashier::getTicketProfit() const
 {
 	return ticket_profit_;
 }
-
+//************************************************************************************* 
+// Function name : sellTickets
+//
+// Description : sells tickets
+//
+// Parameters:  1) the name of a movie
+//				2) the number of a theater
+//				3) if the theater is dubbed or not
+//				4) the number of tickets to be sold
+//				5) the row of the desired seats
+//				6) the rightmost column of the desired seats
+//
+// Return value : the total value of the tickets sold
+//*************************************************************************************
 int Cashier::sellTickets(Movie* movie, Theater* theater, BOOL isDub, int numOfTickets, int row, int column)
 {
 	// check if theater num are ok
@@ -14,29 +37,12 @@ int Cashier::sellTickets(Movie* movie, Theater* theater, BOOL isDub, int numOfTi
 		return 0;
 	if (isDub == TRUE && (((DubbedMovie*)movie)->getHebrewTheaterNum() != theater->getTheaterNum()))
 		return 0;
-
-	//*************************************************************************
-	// the girls did not add this.
-	//*************************************************************************
-	// check if the movie is film this week.
-	BOOL valid = FALSE;
-	for (int i = 1; i <= 7; i++)
-	{
-		if (movie->getNextScreening(i, 1) != 0)
-		{
-			valid = TRUE;
-			break;
-		}
-	}
-	if (valid == FALSE)
+	if (theater->getRowsNum() < row)
 		return 0;
-
-
-
 	// check if we can sell them the tickets
-	if (theater->getColumnsNum() < column + numOfTickets)
+	if (theater->getColumnsNum() < column + numOfTickets - 1)
 		return 0;
-	// chheck if the sit are free
+	// check if the seats are free
 	for (int i = 0; i < numOfTickets; i++)
 	{
 		if (theater->getElement(row, column + i) == TAKEN)

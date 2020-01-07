@@ -8,12 +8,41 @@
 class Employee {
 public:
 	Employee(char* name, int payPerHour, char** workHours); //constructor
-	~Employee() {}; // probably need to work on this
 
 	//Methods
+
+	//************************************************************************************* 
+	// Function name : getName
+	//
+	// Description : gets the name of the employee
+	//
+	// Parameters:  none
+	//
+	// Return value : the name of the employee
+	//*************************************************************************************
 	char* getName() const;
+
+	//************************************************************************************* 
+	// Function name : getSalary
+	//
+	// Description : gets the salary of the employee
+	//
+	// Parameters:  none
+	//
+	// Return value : the salary of the employee
+	//*************************************************************************************
 	int getSalary() const;
-	int calcWeeklySalary();
+
+	//************************************************************************************* 
+	// Function name : calcWeeklySalary
+	//
+	// Description : calculates the weekly salary of an employee
+	//
+	// Parameters:  none
+	//
+	// Return value : the weekly salary of the employee
+	//*************************************************************************************
+	int calcWeeklySalary() const;
 
 private:
 	char* name_;
