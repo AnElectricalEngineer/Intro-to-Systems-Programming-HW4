@@ -1,24 +1,24 @@
 #include "Employee.h"
-#include <stdio.h>
+//#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+//#include <string.h>
 
-Employee::Employee(char* name, int payPerHoure, char** workHours) :
-					name_(name), payPerHoure_(payPerHoure), workHours_(workHours) {}
+Employee::Employee(char* name, int payPerHour, char** workHours) :
+					name_(name), payPerHour_(payPerHour), workHours_(workHours) {}
 
-char* Employee::getName()
+char* Employee::getName() const
 {
 	return name_;
 }
 
-int Employee::getSalary()
+int Employee::getSalary() const
 {
-	return payPerHoure_;
+	return payPerHour_;
 }
 
 int Employee::calcWeeklySalary()
 {
-	int sumHoure = 0;
+	int sumHour = 0;
 
 	// get all work hours
 	for (int i = 0; i < DAYS_IN_WEEK; i++)
@@ -35,8 +35,8 @@ int Employee::calcWeeklySalary()
 		endWork[2] = '\0';
 
 		//add the work hours of the day
-		sumHoure += (atoi(endWork) - atoi(startWork));
+		sumHour += (atoi(endWork) - atoi(startWork));
 	}
 
-	return sumHoure * payPerHoure_;
+	return sumHour * payPerHour_;
 }

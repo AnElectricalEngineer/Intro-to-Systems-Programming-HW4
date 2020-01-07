@@ -49,17 +49,19 @@ BOOL Movie::addScreening(int day, int screening_hour)
 	}
 	//If we get here, there is at least one screening already set for this day
 	int numHours = getLength() / 60;
-	int extraHour = 0;
+	/*int extraHour = 0;
 	if (getLength() % 60)
 		extraHour = 1;
-	const int totalScreeningHours = numHours + extraHour;
+	const int totalScreeningHours = numHours + extraHour;*/
+	const int totalScreeningHours = numHours;
 	int screeningIndx = 1; // for searching where to place next screening
 	while(getElement(day, screeningIndx)) //while there are already screenings 
 	{
 		++screeningIndx;
 	}
 	//Here screeningIndx holds the column index (starting from 1!) of the first empty screening
-	if(getElement(day, screeningIndx - 1) + totalScreeningHours < screening_hour) //If there is no collision with previous movie
+	int lastScreeningTime = getElement(day, screeningIndx - 1);
+	if(lastScreeningTime + totalScreeningHours < screening_hour) //If there is no collision with previous movie
 	{
 		setElement(day, screeningIndx, screening_hour);
 		++num_screenings_[day - 1];

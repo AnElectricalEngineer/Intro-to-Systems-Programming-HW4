@@ -1,17 +1,16 @@
+#ifndef CASHIER_H_
+#define CASHIER_H_
+
 #include "Proj.H"
-#include "Employee.H"
+#include "Employee.h"
 #include "Movie.H"
 #include "DubbedMovie.H"
 #include "Theater.H"
 
-
-#ifndef CASHIER_H_
-#define CASHIER_H_
-
 class Cashier:public Employee{
 public:
-	Cashier(char* name, int payPerHoure, char** workHours); //constructor
-	~Cashier() {}; // added the default destroyer
+	Cashier(char* name, int payPerHour, char** workHours); //constructor
+	~Cashier() {}; // added the default destructor
 
 	//Methods
 	int getTicketProfit() const;

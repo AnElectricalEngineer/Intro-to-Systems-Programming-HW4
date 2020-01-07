@@ -1,23 +1,23 @@
-#include "Proj.H"
-// file Employee.H
 #ifndef EMPLOYEE_H_
 #define EMPLOYEE_H_
+
+// file Employee.H
 
 #define DAYS_IN_WEEK 7
 
 class Employee {
 public:
-	Employee(char* name, int payPerHoure, char** workHours); //constructor
-	~Employee() {}; // probobly need to work on this
+	Employee(char* name, int payPerHour, char** workHours); //constructor
+	~Employee() {}; // probably need to work on this
 
 	//Methods
-	char* getName();
-	int getSalary();
+	char* getName() const;
+	int getSalary() const;
 	int calcWeeklySalary();
 
 private:
 	char* name_;
-	int payPerHoure_;
+	int payPerHour_;
 	char** workHours_;
 };
 
