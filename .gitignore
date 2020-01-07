@@ -37,8 +37,3 @@
 *.filters
 *.user
 HW4/.vs/HW4/v16/.suo
-*.ipch
-*.tlog
-*.pdb
-*.ilk
-*.idb

@@ -9,8 +9,9 @@
 #include "Theater.H"
 #include "Movie.H"
 #include "DubbedMovie.H"
-#include "Employee.H"
-#include "Cashier.H"
+#include "Employee.h"
+#include "Cashier.h"
+
 
 #include <stdlib.h>
 #include <stdio.h>
